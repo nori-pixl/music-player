@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 上詰めに変更 */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f4f8;
+    padding: 15px;
+}
+
+.player-container {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px; /* スマホ横向きでも崩れないよう制限 */
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.menu-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.sub-btn {
+    flex: 1; /* ボタンを横いっぱいに広げる */
+    background: #4a5568;
+    color: white;
+    border: none;
+    padding: 15px 10px; /* タップしやすい高さ */
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.display-area {
+    border: 1px solid #edf2f7;
+    border-radius: 15px;
+    height: 50vh; /* 画面の高さの半分をリストにする */
+    overflow-y: auto;
+    margin-bottom: 20px;
+    text-align: left;
+    background: #fdfdfd;
+}
+
+/* リスト項目（タップエリアを広く） */
+.item {
+    padding: 18px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px; /* 指で押しやすい高さ */
+}
+
+.item:active { background-color: #e2e8f0; } /* タップ時の反応 */
+
+.item-name {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.delete-btn {
+    background-color: #fed7d7;
+    color: #c53030;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* プレイヤー本体（スマホの標準的な見た目） */
+audio {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+#nowPlaying {
+    font-size: 13px;
+    color: #718096;
+    margin-top: 15px;
+    background: #f7fafc;
+    padding: 10px;
+    border-radius: 10px;
+}
