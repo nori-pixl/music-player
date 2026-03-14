@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フォルダ管理音楽プレーヤー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="player-container">
+        <h2 id="currentTitle">Music Player</h2>
+        
+        <div class="menu-bar">
+            <button id="backBtn" class="sub-btn" style="display:none;">← 戻る</button>
+            <button id="createFolderBtn" class="sub-btn">＋ フォルダ作成</button>
+            <button id="addMusicBtn" class="sub-btn" style="display:none;">＋ 曲を追加</button>
+            <input type="file" id="audioFile" accept="audio/*" multiple style="display:none;">
+        </div>
+
+        <div id="mainDisplay" class="display-area"></div>
+
+        <audio id="myAudio" controls></audio>
+        <p id="nowPlaying">曲を選択してください</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
